@@ -9,14 +9,14 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.company.config.SpringRepository;
-import com.company.config.SpringWeb;
+import com.company.config.SpringService;
 import com.db.sys.dao.SysLogDao;
 
 public class TestBase {
 	protected AnnotationConfigApplicationContext ctx;
 	@Before
 	public void init() {
-		ctx=new AnnotationConfigApplicationContext(SpringRepository.class,SpringWeb.class);
+		ctx=new AnnotationConfigApplicationContext(SpringRepository.class,SpringService.class);
 	}
 	@Test
 	public void testCtx() {
